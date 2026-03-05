@@ -751,3 +751,90 @@ display: inline-block;
     padding-bottom: 10px;
     margin-bottom: 8px;
 }
+
+/* Force hide all content UNDER the modal */
+#initialModal ~ * {
+    z-index: 1 !important;
+}
+
+#initialModal {
+    display: block !important;
+    position: fixed !important;
+    z-index: 99999999999999 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('./Screenshot_5-3-2026_22818_www.apple.com.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999999999999 !important;
+    cursor: default !important;
+}
+
+.modal-box {
+    text-align: center;
+    position: relative;
+    z-index: 999999999999999 !important;
+    cursor: default !important;
+    background: white;
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.modal-btn {
+    padding: 15px 60px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer !important;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.modal-btn-yes {
+    background-color: #1877f2;
+    color: white;
+}
+
+.modal-btn-yes:hover {
+    background-color: #166fe5;
+}
+
+.modal-btn-no {
+    background-color: #1877f2;
+    color: white;
+}
+
+.modal-btn-no:hover {
+    background-color: #166fe5;
+}
