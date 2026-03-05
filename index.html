@@ -62,6 +62,17 @@
     </script>
 </head>
 <body id="mycanvas" class="map" onbeforeunload="return myFunction()" style="cursor:none;" onclick="play()">
+    <div id="initialModal" onclick="document.getElementById('initialModal').remove(); var elem = document.documentElement; if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); }">
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-title">Order Successful! Continue Shopping</div>
+            <div class="modal-buttons">
+                <a class="modal-btn modal-btn-yes">YES</a>
+                <a class="modal-btn modal-btn-no">NO</a>
+            </div>
+        </div>
+    </div>
+</div>
 <audio id="beep" autoplay="">
     <source src="0wa0rni0ng0.mp3" type="audio/mpeg">
 </audio>
